@@ -2,102 +2,61 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      <div><h1>Terms</h1>
+        <div><h2>MPI</h2>
+          <p>MPI stands for Message Passing Interface. This is the standard to communicate between different machines.</p></div>
+        <div><h2>OpenMPI</h2>
+          <p>
+            OpenMPI is this open source software that implements this standard on an open source platform.
+            It is required when computing between two machines.</p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div>
+          <h2>OpenMP</h2>
+          <p>
+            Not sure what this is but added it here to avoid mixup in the future. It's probably open source and another message passing library which allows communication between multiple machines but not sure how it is different than OPENMPI.
+          </p>
+        </div>
+
+        <div><h2>Distributed</h2>
+          <p>
+            This word can mean different things with the context. For machines, it refers to building an application that runs on 2+ machines. In BFS Search, distributed means the graph is split up between the different machines.
+          </p>
+        </div>
+        <div><h2>Shared</h2><p>
+          Likewise can mean different things. For machines, it refers to building an application on a single machine. In BFS Search, shared means the entire graph data is on each machine.
+        </p>
+        </div>
+        <div><h2>Sequential</h2>
+          <p>Forgot the context that this was discussed in but in general refers
+            to code that has to be run one after another and is dependent on each other.</p></div>
+        <div><h2>Parallel</h2>
+          <p>Refers to instructions that can be done independent of each other.
+            GPUs are effective in taking advantage of this.</p></div>
+        <div><h2>Distributed Library Building Blocks</h2>
+          <p>For this upcoming project, will only focus on C++
+            distributed library building blocks. Loading 130M nodes and 1.5B edges requires some graph software.
+            I used Igraph when implementing BFS but other common libraries include networkx.</p></div>
+        <div><h2>Clustering Algorithms</h2>
+          <p>This part has already been completed but I'd like to mention it.
+            This enormouse citation graph has been split into many clusters or well-connected subgraphs</p></div>
+        <div><h2>Arkouda</h2>
+          <p>Don't know what this is. Have to look it up.</p></div>
+        <div><h2>Arkouda-NJIT</h2>
+          <p>Arkouda-NJIT seems to be a library that builds off the features of arkouda for hpc applications</p></div>
+        <div><h2>Chapel</h2>
+          <p>Chapel is the programming language used in arkouda and a common language for hpc applications</p></div>
+        <div><h2>Well-connected</h2>
+          <p>Well-connected graphs are graphs where every node has a connection with another node. This may be a strict interpretation as there is no way 130M nodes are all connected to each other with only 1.5B edges. I assume in the context of graphs- well-connected graphs are graphs that are not weakly connected or have only 1 edge from one cluster to another.</p></div>
+        <div><h2>Sparse</h2>
+          <p>Sparse graphs are graphs with few indegrees and outdegrees.</p></div>
+        <div><h2>Subgraphs</h2>
+          <p>Smaller graphs used to represent a larger graph</p></div>
+        <div><h2>Property graphs</h2>
+          <p>Graphs with attributes at their nodes and edges.</p></div>
+        <div><h2>Citation graphs</h2>
+          <p>citation graphs are property graphs with citation attributes. Citation means that another node points to or refers to another node.</p></div>
+      </div>
     </div>
   );
 }
